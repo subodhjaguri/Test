@@ -66,7 +66,7 @@ function App() {
         {products.map((product) => (
           <div style={{ width: "25%", height: "30%" }}>
             <Image
-              style={{ width: "100%", height: "100px" }}
+              style={{ width: "100%", height: "100px", objectFit: "contain" }}
               src={product.image}
               rounded
               fluid
