@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Col, Container, Dropdown, Image, Row } from "react-bootstrap";
+import { Dropdown, Image } from "react-bootstrap";
 import axios from "axios";
 
 function App() {
@@ -75,7 +75,7 @@ function App() {
               <p> {product.name}</p>
               <p>
                 {" "}
-                {currency == "INR"
+                {currency === "INR"
                   ? ` ₹ ${product.price.toFixed(2)} `
                   : `$ ${(rate * product.price).toFixed(2)}`}
               </p>
@@ -84,7 +84,7 @@ function App() {
         ))}
         <Dropdown style={{ width: "20%" }}>
           <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-            Currency :{currency == "INR" ? "INR" : "USD"}
+            Currency :{currency === "INR" ? "INR" : "USD"}
           </Dropdown.Toggle>
 
           <Dropdown.Menu>
